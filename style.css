@@ -1,0 +1,79 @@
+#ziz1, h2 {
+      font-family: "Lato", sans-serif;
+      font-size: 70px;
+      color: white;
+      text-align: center;
+      margin-top: 180px;
+      justify-content: center;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+body, html {
+  height: 100%;
+}
+
+body {
+  background-image:url(bg.png);
+  background-size:cover;
+  font-family: "Lato", sans-serif;
+  color: #333333;
+}
+
+.container {
+  text-align: center;
+  justify-content: center;
+
+}
+.container {
+  width: auto;
+  height: auto;
+  margin: 60px;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn {
+  position: relative;
+  letter-spacing: 0.25em;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: #ffffff;
+}
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+}
+.btn::before {
+  background-color: #8a19ff;
+  top: -1rem;
+  left: 0rem;
+}
+.btn::after {
+  background-color: #ff007f;
+  top: 1rem;
+  left: 8rem;
+}
+.btn:hover::before, .btn:hover::after {
+  top: 0;
+  -webkit-transform: skewx(0deg);
+          transform: skewx(0deg);
+}
+.btn:hover::after {
+  left: 0rem;
+}
+.btn:hover::before {
+  left: 8.75rem;
+}
